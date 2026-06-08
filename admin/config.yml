@@ -1,0 +1,28 @@
+backend:
+  name: github
+  repo: scriptr-in/Portfolio
+  branch: main
+
+media_folder: "images"
+
+collections:
+  - name: "settings"
+    label: "Site Content"
+    files:
+      - name: "homepage"
+        label: "Homepage"
+        file: "content.json"
+        fields:
+          - { label: "Hero Headline", name: "hero_headline", widget: "string" }
+          - { label: "Hero Description", name: "hero_desc", widget: "text" }
+          - { label: "Stat 1 Number", name: "stat1_num", widget: "string" }
+          - { label: "Stat 1 Label", name: "stat1_label", widget: "string" }
+          - { label: "Stat 2 Number", name: "stat2_num", widget: "string" }
+          - { label: "Stat 2 Label", name: "stat2_label", widget: "string" }
+          - { label: "Stat 3 Number", name: "stat3_num", widget: "string" }
+          - { label: "Stat 3 Label", name: "stat3_label", widget: "string" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Instagram Handle", name: "instagram", widget: "string" }
+          - { label: "City 1", name: "city1", widget: "string" }
+          - { label: "City 2", name: "city2", widget: "string" }
+          - { label: "City 3", name: "city3", widget: "string" }
