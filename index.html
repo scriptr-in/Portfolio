@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>scriptr. — Strategy. Story. Impact.</title>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -1262,7 +1263,10 @@
 
 <!-- NAV -->
 <nav>
-  <a href="#" class="nav-logo" id="cms-brand-name">scriptr<span>.</span></a>
+  <a href="#" class="nav-logo" id="cms-brand-name">
+    <img id="cms-logo-img" src="" alt="scriptr." style="height:36px;display:none;">
+    <span id="cms-logo-text">scriptr<span style="color:var(--orange)">.</span></span>
+  </a>
   <ul class="nav-links">
     <li><a href="#services">Services</a></li>
     <li><a href="#work">Work</a></li>
@@ -1276,11 +1280,18 @@
 </nav>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero" id="hero-section">
   <div class="hero-grid-bg"></div>
-  <div class="hero-eyebrow"><span class="accent-line"></span><span id="cms-hero-eyebrow">Content-Driven Campaigns That Move Culture</span></div>
-  <h1 class="hero-headline" id="cms-hero-headline">We Don't Make <em>Ads.</em> We Make <em>Moments.</em></h1>
-  <div class="hero-sub-row">
+  <!-- Hero background video (hidden by default, shown if video URL provided) -->
+  <video id="cms-hero-video" autoplay muted loop playsinline
+    style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.35;display:none;z-index:0;">
+  </video>
+  <!-- Hero background image (hidden by default, shown if image URL provided) -->
+  <img id="cms-hero-image" src="" alt=""
+    style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.35;display:none;z-index:0;">
+  <div class="hero-eyebrow" style="position:relative;z-index:1;"><span class="accent-line"></span><span id="cms-hero-eyebrow">Content-Driven Campaigns That Move Culture</span></div>
+  <h1 class="hero-headline" id="cms-hero-headline" style="position:relative;z-index:1;">We Don't Make <em>Ads.</em> We Make <em>Moments.</em></h1>
+  <div class="hero-sub-row" style="position:relative;z-index:1;">
     <p class="hero-desc" id="cms-hero-desc">Strategy, storytelling, and production — converged into viral campaigns that don't just get views, they shift behaviour.</p>
     <div class="hero-stats">
       <div class="stat-item">
@@ -1297,7 +1308,7 @@
       </div>
     </div>
   </div>
-  <div class="hero-scroll-hint">
+  <div class="hero-scroll-hint" style="position:relative;z-index:1;">
     <div class="scroll-line"></div>
     Scroll to explore
   </div>
@@ -1329,12 +1340,30 @@
 <section class="clients">
   <div class="clients-label" id="cms-clients-label">Trusted by forward-thinking brands</div>
   <div class="clients-row">
-    <div class="client-name" id="cms-client1">NaturaCo</div>
-    <div class="client-name" id="cms-client2">VaultTech</div>
-    <div class="client-name" id="cms-client3">DayMade</div>
-    <div class="client-name" id="cms-client4">Mireille Studio</div>
-    <div class="client-name" id="cms-client5">Apex Group</div>
-    <div class="client-name" id="cms-client6">Nuova Foods</div>
+    <div class="client-logo-wrap" id="cms-client1-wrap">
+      <img id="cms-client1-img" src="" alt="" style="display:none;height:32px;object-fit:contain;filter:brightness(0) invert(1);opacity:0.4;transition:opacity 0.3s;">
+      <div class="client-name" id="cms-client1">NaturaCo</div>
+    </div>
+    <div class="client-logo-wrap" id="cms-client2-wrap">
+      <img id="cms-client2-img" src="" alt="" style="display:none;height:32px;object-fit:contain;filter:brightness(0) invert(1);opacity:0.4;transition:opacity 0.3s;">
+      <div class="client-name" id="cms-client2">VaultTech</div>
+    </div>
+    <div class="client-logo-wrap" id="cms-client3-wrap">
+      <img id="cms-client3-img" src="" alt="" style="display:none;height:32px;object-fit:contain;filter:brightness(0) invert(1);opacity:0.4;transition:opacity 0.3s;">
+      <div class="client-name" id="cms-client3">DayMade</div>
+    </div>
+    <div class="client-logo-wrap" id="cms-client4-wrap">
+      <img id="cms-client4-img" src="" alt="" style="display:none;height:32px;object-fit:contain;filter:brightness(0) invert(1);opacity:0.4;transition:opacity 0.3s;">
+      <div class="client-name" id="cms-client4">Mireille Studio</div>
+    </div>
+    <div class="client-logo-wrap" id="cms-client5-wrap">
+      <img id="cms-client5-img" src="" alt="" style="display:none;height:32px;object-fit:contain;filter:brightness(0) invert(1);opacity:0.4;transition:opacity 0.3s;">
+      <div class="client-name" id="cms-client5">Apex Group</div>
+    </div>
+    <div class="client-logo-wrap" id="cms-client6-wrap">
+      <img id="cms-client6-img" src="" alt="" style="display:none;height:32px;object-fit:contain;filter:brightness(0) invert(1);opacity:0.4;transition:opacity 0.3s;">
+      <div class="client-name" id="cms-client6">Nuova Foods</div>
+    </div>
   </div>
 </section>
 
@@ -1412,8 +1441,15 @@
     <a href="#" class="view-all reveal">View All Work</a>
   </div>
   <div class="work-grid reveal">
+
     <div class="campaign-card">
-      <div class="card-bg bg-1"><div class="card-abstract"><svg width="400" height="500" viewBox="0 0 400 500" style="top:-20px;left:-20px;"><circle cx="200" cy="250" r="180" fill="none" stroke="#CC5500" stroke-width="60"/><circle cx="200" cy="250" r="100" fill="none" stroke="#FF6B1A" stroke-width="30"/><line x1="0" y1="250" x2="400" y2="250" stroke="#CC5500" stroke-width="2"/><line x1="200" y1="0" x2="200" y2="500" stroke="#CC5500" stroke-width="2"/></svg></div></div>
+      <div class="card-bg bg-1" id="cms-work1-bg">
+        <div class="card-abstract" id="cms-work1-abstract">
+          <svg width="400" height="500" viewBox="0 0 400 500" style="top:-20px;left:-20px;"><circle cx="200" cy="250" r="180" fill="none" stroke="#CC5500" stroke-width="60"/><circle cx="200" cy="250" r="100" fill="none" stroke="#FF6B1A" stroke-width="30"/><line x1="0" y1="250" x2="400" y2="250" stroke="#CC5500" stroke-width="2"/><line x1="200" y1="0" x2="200" y2="500" stroke="#CC5500" stroke-width="2"/></svg>
+        </div>
+        <img id="cms-work1-img" src="" alt="" style="display:none;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+        <video id="cms-work1-video" autoplay muted loop playsinline style="display:none;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></video>
+      </div>
       <div class="card-overlay"></div>
       <div class="card-content">
         <div class="card-tag" id="cms-work1-tag">FMCG · Brand Film</div>
@@ -1424,8 +1460,15 @@
         </div>
       </div>
     </div>
+
     <div class="campaign-card">
-      <div class="card-bg bg-2"><div class="card-abstract"><svg width="350" height="280" viewBox="0 0 350 280" style="top:0;right:-30px;"><polygon points="175,20 320,250 30,250" fill="none" stroke="#4A9EFF" stroke-width="40" opacity="0.5"/><polygon points="175,70 280,230 70,230" fill="none" stroke="#0066CC" stroke-width="20"/></svg></div></div>
+      <div class="card-bg bg-2" id="cms-work2-bg">
+        <div class="card-abstract" id="cms-work2-abstract">
+          <svg width="350" height="280" viewBox="0 0 350 280" style="top:0;right:-30px;"><polygon points="175,20 320,250 30,250" fill="none" stroke="#4A9EFF" stroke-width="40" opacity="0.5"/><polygon points="175,70 280,230 70,230" fill="none" stroke="#0066CC" stroke-width="20"/></svg>
+        </div>
+        <img id="cms-work2-img" src="" alt="" style="display:none;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+        <video id="cms-work2-video" autoplay muted loop playsinline style="display:none;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></video>
+      </div>
       <div class="card-overlay"></div>
       <div class="card-content">
         <div class="card-tag" id="cms-work2-tag">Tech · Social Campaign</div>
@@ -1436,8 +1479,15 @@
         </div>
       </div>
     </div>
+
     <div class="campaign-card">
-      <div class="card-bg bg-3"><div class="card-abstract"><svg width="350" height="280" viewBox="0 0 350 280" style="bottom:0;left:0;"><rect x="30" y="30" width="290" height="220" fill="none" stroke="#FFFF00" stroke-width="30" opacity="0.3"/><rect x="80" y="80" width="190" height="120" fill="none" stroke="#CCCC00" stroke-width="20" opacity="0.5"/><rect x="120" y="110" width="110" height="60" fill="rgba(200,200,0,0.1)"/></svg></div></div>
+      <div class="card-bg bg-3" id="cms-work3-bg">
+        <div class="card-abstract" id="cms-work3-abstract">
+          <svg width="350" height="280" viewBox="0 0 350 280" style="bottom:0;left:0;"><rect x="30" y="30" width="290" height="220" fill="none" stroke="#FFFF00" stroke-width="30" opacity="0.3"/><rect x="80" y="80" width="190" height="120" fill="none" stroke="#CCCC00" stroke-width="20" opacity="0.5"/><rect x="120" y="110" width="110" height="60" fill="rgba(200,200,0,0.1)"/></svg>
+        </div>
+        <img id="cms-work3-img" src="" alt="" style="display:none;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+        <video id="cms-work3-video" autoplay muted loop playsinline style="display:none;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></video>
+      </div>
       <div class="card-overlay"></div>
       <div class="card-content">
         <div class="card-tag" id="cms-work3-tag">Lifestyle · UGC Campaign</div>
@@ -1448,8 +1498,15 @@
         </div>
       </div>
     </div>
+
     <div class="campaign-card">
-      <div class="card-bg bg-4"><div class="card-abstract"><svg width="350" height="280" viewBox="0 0 350 280" style="top:-20px;right:-20px;"><ellipse cx="175" cy="140" rx="150" ry="110" fill="none" stroke="#FF4444" stroke-width="50" opacity="0.3"/><ellipse cx="175" cy="140" rx="80" ry="60" fill="rgba(200,0,0,0.15)"/></svg></div></div>
+      <div class="card-bg bg-4" id="cms-work4-bg">
+        <div class="card-abstract" id="cms-work4-abstract">
+          <svg width="350" height="280" viewBox="0 0 350 280" style="top:-20px;right:-20px;"><ellipse cx="175" cy="140" rx="150" ry="110" fill="none" stroke="#FF4444" stroke-width="50" opacity="0.3"/><ellipse cx="175" cy="140" rx="80" ry="60" fill="rgba(200,0,0,0.15)"/></svg>
+        </div>
+        <img id="cms-work4-img" src="" alt="" style="display:none;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+        <video id="cms-work4-video" autoplay muted loop playsinline style="display:none;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></video>
+      </div>
       <div class="card-overlay"></div>
       <div class="card-content">
         <div class="card-tag" id="cms-work4-tag">Fashion · Launch Campaign</div>
@@ -1460,6 +1517,7 @@
         </div>
       </div>
     </div>
+
   </div>
 </section>
 
@@ -1468,38 +1526,63 @@
   <div class="section-label reveal"><span class="accent-line"></span>The Team</div>
   <h2 class="section-title reveal" id="cms-team-headline">The Minds Behind the Magic.</h2>
   <div class="team-grid reveal">
+
     <div class="team-card">
-      <div class="team-avatar"><div class="avatar-bg ab-1"><svg width="160" height="160" viewBox="0 0 160 160"><circle cx="80" cy="60" r="35" fill="rgba(204,85,0,0.3)"/><path d="M20 140 Q80 90 140 140" fill="rgba(204,85,0,0.2)"/><circle cx="80" cy="60" r="20" fill="rgba(204,85,0,0.5)"/></svg></div></div>
+      <div class="team-avatar">
+        <div class="avatar-bg ab-1" id="cms-team1-avatar-bg">
+          <svg width="160" height="160" viewBox="0 0 160 160" id="cms-team1-svg"><circle cx="80" cy="60" r="35" fill="rgba(204,85,0,0.3)"/><path d="M20 140 Q80 90 140 140" fill="rgba(204,85,0,0.2)"/><circle cx="80" cy="60" r="20" fill="rgba(204,85,0,0.5)"/></svg>
+          <img id="cms-team1-photo" src="" alt="" style="display:none;width:100%;height:100%;object-fit:cover;border-radius:50%;">
+        </div>
+      </div>
       <div class="team-info">
         <div class="member-role" id="cms-team1-role">Strategy Director</div>
         <div class="member-name" id="cms-team1-name">Zara Okonkwo</div>
         <p class="member-desc" id="cms-team1-bio">10 years shaping brand narratives for Fortune 500s. Obsessed with the gap between what brands say and what audiences remember.</p>
       </div>
     </div>
+
     <div class="team-card">
-      <div class="team-avatar"><div class="avatar-bg ab-2"><svg width="160" height="160" viewBox="0 0 160 160"><circle cx="80" cy="60" r="35" fill="rgba(70,130,200,0.3)"/><path d="M20 140 Q80 90 140 140" fill="rgba(70,130,200,0.2)"/><circle cx="80" cy="60" r="20" fill="rgba(70,130,200,0.5)"/></svg></div></div>
+      <div class="team-avatar">
+        <div class="avatar-bg ab-2" id="cms-team2-avatar-bg">
+          <svg width="160" height="160" viewBox="0 0 160 160" id="cms-team2-svg"><circle cx="80" cy="60" r="35" fill="rgba(70,130,200,0.3)"/><path d="M20 140 Q80 90 140 140" fill="rgba(70,130,200,0.2)"/><circle cx="80" cy="60" r="20" fill="rgba(70,130,200,0.5)"/></svg>
+          <img id="cms-team2-photo" src="" alt="" style="display:none;width:100%;height:100%;object-fit:cover;border-radius:50%;">
+        </div>
+      </div>
       <div class="team-info">
         <div class="member-role" id="cms-team2-role">Creative Director</div>
         <div class="member-name" id="cms-team2-name">Marcus Reyes</div>
         <p class="member-desc" id="cms-team2-bio">Concept architect. Turns briefs into cultural conversation starters. Former ad agency creative lead, now independent and unleashed.</p>
       </div>
     </div>
+
     <div class="team-card">
-      <div class="team-avatar"><div class="avatar-bg ab-3"><svg width="160" height="160" viewBox="0 0 160 160"><circle cx="80" cy="60" r="35" fill="rgba(180,180,0,0.3)"/><path d="M20 140 Q80 90 140 140" fill="rgba(180,180,0,0.2)"/><circle cx="80" cy="60" r="20" fill="rgba(180,180,0,0.5)"/></svg></div></div>
+      <div class="team-avatar">
+        <div class="avatar-bg ab-3" id="cms-team3-avatar-bg">
+          <svg width="160" height="160" viewBox="0 0 160 160" id="cms-team3-svg"><circle cx="80" cy="60" r="35" fill="rgba(180,180,0,0.3)"/><path d="M20 140 Q80 90 140 140" fill="rgba(180,180,0,0.2)"/><circle cx="80" cy="60" r="20" fill="rgba(180,180,0,0.5)"/></svg>
+          <img id="cms-team3-photo" src="" alt="" style="display:none;width:100%;height:100%;object-fit:cover;border-radius:50%;">
+        </div>
+      </div>
       <div class="team-info">
         <div class="member-role" id="cms-team3-role">Director of Photography</div>
         <div class="member-name" id="cms-team3-name">Suki Tanaka</div>
         <p class="member-desc" id="cms-team3-bio">Frames that feel. Shot campaigns across 22 countries. Equally at home with a RED cinema camera or a phone in vertical mode.</p>
       </div>
     </div>
+
     <div class="team-card">
-      <div class="team-avatar"><div class="avatar-bg ab-4"><svg width="160" height="160" viewBox="0 0 160 160"><circle cx="80" cy="60" r="35" fill="rgba(200,50,80,0.3)"/><path d="M20 140 Q80 90 140 140" fill="rgba(200,50,80,0.2)"/><circle cx="80" cy="60" r="20" fill="rgba(200,50,80,0.5)"/></svg></div></div>
+      <div class="team-avatar">
+        <div class="avatar-bg ab-4" id="cms-team4-avatar-bg">
+          <svg width="160" height="160" viewBox="0 0 160 160" id="cms-team4-svg"><circle cx="80" cy="60" r="35" fill="rgba(200,50,80,0.3)"/><path d="M20 140 Q80 90 140 140" fill="rgba(200,50,80,0.2)"/><circle cx="80" cy="60" r="20" fill="rgba(200,50,80,0.5)"/></svg>
+          <img id="cms-team4-photo" src="" alt="" style="display:none;width:100%;height:100%;object-fit:cover;border-radius:50%;">
+        </div>
+      </div>
       <div class="team-info">
         <div class="member-role" id="cms-team4-role">Distribution & Growth</div>
         <div class="member-name" id="cms-team4-name">Levi Adeyemi</div>
         <p class="member-desc" id="cms-team4-bio">Data meets instinct. Builds distribution engines that turn great content into exponential reach. Loves a spreadsheet as much as a headline.</p>
       </div>
     </div>
+
   </div>
 </section>
 
@@ -1832,35 +1915,78 @@
 </script>
 <!-- CMS CONTENT LOADER -->
 <script>
-  // Load all content from content.json and populate the page
   fetch('/content.json')
     .then(r => r.json())
     .then(c => {
       const set = (id, val) => { const el = document.getElementById(id); if (el && val) el.textContent = val; };
       const setHref = (id, val) => { const el = document.getElementById(id); if (el && val) el.href = val; };
 
+      // Helper: show image, hide SVG
+      const setImg = (imgId, svgId, src) => {
+        if (!src) return;
+        const img = document.getElementById(imgId);
+        const svg = document.getElementById(svgId);
+        if (img) { img.src = src; img.style.display = 'block'; }
+        if (svg) svg.style.display = 'none';
+      };
+
+      // Helper: show video, hide SVG and abstract
+      const setVideo = (videoId, abstractId, src) => {
+        if (!src) return;
+        const video = document.getElementById(videoId);
+        const abs = document.getElementById(abstractId);
+        if (video) { video.src = src; video.style.display = 'block'; video.play(); }
+        if (abs) abs.style.display = 'none';
+      };
+
+      // Helper: show work card image
+      const setWorkImg = (imgId, abstractId, src) => {
+        if (!src) return;
+        const img = document.getElementById(imgId);
+        const abs = document.getElementById(abstractId);
+        if (img) { img.src = src; img.style.display = 'block'; }
+        if (abs) abs.style.display = 'none';
+      };
+
+      // Helper: show client logo image
+      const setClientLogo = (imgId, textId, src) => {
+        if (!src) return;
+        const img = document.getElementById(imgId);
+        const txt = document.getElementById(textId);
+        if (img) { img.src = src; img.style.display = 'block'; }
+        if (txt) txt.style.display = 'none';
+      };
+
       // Page title
       if (c.page_title) document.title = c.page_title;
 
-      // Brand & Nav
-      set('cms-brand-name', c.brand_name);
+      // Logo — image or text
+      if (c.logo_image) {
+        const logoImg = document.getElementById('cms-logo-img');
+        const logoTxt = document.getElementById('cms-logo-text');
+        if (logoImg) { logoImg.src = c.logo_image; logoImg.style.display = 'block'; }
+        if (logoTxt) logoTxt.style.display = 'none';
+      } else {
+        set('cms-logo-text', c.brand_name);
+      }
       set('cms-nav-cta', c.nav_cta);
 
-      // Hero
+      // Hero background — video takes priority over image
+      if (c.hero_video) {
+        const hv = document.getElementById('cms-hero-video');
+        if (hv) { hv.src = c.hero_video; hv.style.display = 'block'; hv.play(); }
+      } else if (c.hero_image) {
+        const hi = document.getElementById('cms-hero-image');
+        if (hi) { hi.src = c.hero_image; hi.style.display = 'block'; }
+      }
       set('cms-hero-eyebrow', c.hero_eyebrow);
       set('cms-hero-headline', c.hero_headline);
       set('cms-hero-desc', c.hero_desc);
-      set('cms-stat1-num', c.stat1_num);
-      set('cms-stat1-unit', c.stat1_unit);
-      set('cms-stat1-label', c.stat1_label);
-      set('cms-stat2-num', c.stat2_num);
-      set('cms-stat2-unit', c.stat2_unit);
-      set('cms-stat2-label', c.stat2_label);
-      set('cms-stat3-num', c.stat3_num);
-      set('cms-stat3-unit', c.stat3_unit);
-      set('cms-stat3-label', c.stat3_label);
+      set('cms-stat1-num', c.stat1_num); set('cms-stat1-unit', c.stat1_unit); set('cms-stat1-label', c.stat1_label);
+      set('cms-stat2-num', c.stat2_num); set('cms-stat2-unit', c.stat2_unit); set('cms-stat2-label', c.stat2_label);
+      set('cms-stat3-num', c.stat3_num); set('cms-stat3-unit', c.stat3_unit); set('cms-stat3-label', c.stat3_label);
 
-      // Marquee — rebuild both sets
+      // Marquee
       const marqueeKeys = ['marquee1','marquee2','marquee3','marquee4','marquee5','marquee6','marquee7','marquee8'];
       const track = document.getElementById('cms-marquee-track');
       if (track) {
@@ -1869,74 +1995,53 @@
         track.innerHTML = doubled.map(t => `<div class="marquee-item">${t}</div>`).join('');
       }
 
-      // Clients
+      // Clients — logo image or text
       set('cms-clients-label', c.clients_label);
-      set('cms-client1', c.client1);
-      set('cms-client2', c.client2);
-      set('cms-client3', c.client3);
-      set('cms-client4', c.client4);
-      set('cms-client5', c.client5);
-      set('cms-client6', c.client6);
+      setClientLogo('cms-client1-img', 'cms-client1', c.client1_logo); set('cms-client1', c.client1);
+      setClientLogo('cms-client2-img', 'cms-client2', c.client2_logo); set('cms-client2', c.client2);
+      setClientLogo('cms-client3-img', 'cms-client3', c.client3_logo); set('cms-client3', c.client3);
+      setClientLogo('cms-client4-img', 'cms-client4', c.client4_logo); set('cms-client4', c.client4);
+      setClientLogo('cms-client5-img', 'cms-client5', c.client5_logo); set('cms-client5', c.client5);
+      setClientLogo('cms-client6-img', 'cms-client6', c.client6_logo); set('cms-client6', c.client6);
 
       // Services
       set('cms-services-headline', c.services_headline);
-      set('cms-service1-title', c.service1_title);
-      set('cms-service1-desc', c.service1_desc);
-      set('cms-service2-title', c.service2_title);
-      set('cms-service2-desc', c.service2_desc);
-      set('cms-service3-title', c.service3_title);
-      set('cms-service3-desc', c.service3_desc);
-      set('cms-service4-title', c.service4_title);
-      set('cms-service4-desc', c.service4_desc);
+      set('cms-service1-title', c.service1_title); set('cms-service1-desc', c.service1_desc);
+      set('cms-service2-title', c.service2_title); set('cms-service2-desc', c.service2_desc);
+      set('cms-service3-title', c.service3_title); set('cms-service3-desc', c.service3_desc);
+      set('cms-service4-title', c.service4_title); set('cms-service4-desc', c.service4_desc);
 
       // Process
       set('cms-process-headline', c.process_headline);
-      set('cms-step1-tag', c.step1_tag);
-      set('cms-step1-title', c.step1_title);
-      set('cms-step1-desc', c.step1_desc);
-      set('cms-step2-tag', c.step2_tag);
-      set('cms-step2-title', c.step2_title);
-      set('cms-step2-desc', c.step2_desc);
-      set('cms-step3-tag', c.step3_tag);
-      set('cms-step3-title', c.step3_title);
-      set('cms-step3-desc', c.step3_desc);
-      set('cms-step4-tag', c.step4_tag);
-      set('cms-step4-title', c.step4_title);
-      set('cms-step4-desc', c.step4_desc);
+      set('cms-step1-tag', c.step1_tag); set('cms-step1-title', c.step1_title); set('cms-step1-desc', c.step1_desc);
+      set('cms-step2-tag', c.step2_tag); set('cms-step2-title', c.step2_title); set('cms-step2-desc', c.step2_desc);
+      set('cms-step3-tag', c.step3_tag); set('cms-step3-title', c.step3_title); set('cms-step3-desc', c.step3_desc);
+      set('cms-step4-tag', c.step4_tag); set('cms-step4-title', c.step4_title); set('cms-step4-desc', c.step4_desc);
 
-      // Work
+      // Work — video takes priority over image
       set('cms-work-headline', c.work_headline);
-      set('cms-work1-tag', c.work1_tag);
-      set('cms-work1-title', c.work1_title);
-      set('cms-work1-type', c.work1_type);
-      set('cms-work1-result', c.work1_result);
-      set('cms-work2-tag', c.work2_tag);
-      set('cms-work2-title', c.work2_title);
-      set('cms-work2-type', c.work2_type);
-      set('cms-work2-result', c.work2_result);
-      set('cms-work3-tag', c.work3_tag);
-      set('cms-work3-title', c.work3_title);
-      set('cms-work3-type', c.work3_type);
-      set('cms-work3-result', c.work3_result);
-      set('cms-work4-tag', c.work4_tag);
-      set('cms-work4-title', c.work4_title);
-      set('cms-work4-type', c.work4_type);
-      set('cms-work4-result', c.work4_result);
+      ['1','2','3','4'].forEach(n => {
+        set(`cms-work${n}-tag`, c[`work${n}_tag`]);
+        set(`cms-work${n}-title`, c[`work${n}_title`]);
+        set(`cms-work${n}-type`, c[`work${n}_type`]);
+        set(`cms-work${n}-result`, c[`work${n}_result`]);
+        if (c[`work${n}_video`]) {
+          setVideo(`cms-work${n}-video`, `cms-work${n}-abstract`, c[`work${n}_video`]);
+        } else if (c[`work${n}_image`]) {
+          setWorkImg(`cms-work${n}-img`, `cms-work${n}-abstract`, c[`work${n}_image`]);
+        }
+      });
 
-      // Team
+      // Team — photo or SVG avatar
       set('cms-team-headline', c.team_headline);
-      set('cms-team1-name', c.team1_name);
-      set('cms-team1-role', c.team1_role);
-      set('cms-team1-bio', c.team1_bio);
-      set('cms-team2-name', c.team2_name);
-      set('cms-team2-role', c.team2_role);
-      set('cms-team2-bio', c.team2_bio);
-      set('cms-team3-name', c.team3_name);
-      set('cms-team3-role', c.team3_role);
-      set('cms-team3-bio', c.team3_bio);
-      set('cms-team4-name', c.team4_name);
-      set('cms-team4-role', c.team4_role);
-      set('cms-team4-bio', c.team4_bio);
+      ['1','2','3','4'].forEach(n => {
+        set(`cms-team${n}-name`, c[`team${n}_name`]);
+        set(`cms-team${n}-role`, c[`team${n}_role`]);
+        set(`cms-team${n}-bio`, c[`team${n}_bio`]);
+        if (c[`team${n}_photo`]) {
+          setImg(`cms-team${n}-photo`, `cms-team${n}-svg`, c[`team${n}_photo`]);
+        }
+      });
 
       // Manifesto
       set('cms-manifesto-text', c.manifesto_text);
@@ -1946,13 +2051,10 @@
       set('cms-contact-headline', c.contact_headline);
       set('cms-contact-email', c.contact_email);
       set('cms-contact-instagram', c.contact_instagram);
-      set('cms-city1', c.city1);
-      set('cms-city2', c.city2);
-      set('cms-city3', c.city3);
+      set('cms-city1', c.city1); set('cms-city2', c.city2); set('cms-city3', c.city3);
 
       // Footer
-      set('cms-footer-brand', c.brand_name);
-      set('cms-footer-brand2', c.brand_name);
+      set('cms-footer-brand', c.brand_name); set('cms-footer-brand2', c.brand_name);
       set('cms-footer-tagline', c.footer_tagline);
       set('cms-footer-about', c.footer_about);
       set('cms-footer-email', c.contact_email);
@@ -1961,12 +2063,8 @@
       set('cms-footer-gst', c.gst_number);
       set('cms-copyright-year', c.copyright_year);
       set('cms-footer-signoff', c.footer_signoff);
-      set('cms-footer-s1', c.service1_title);
-      set('cms-footer-s2', c.service2_title);
-      set('cms-footer-s3', c.service3_title);
-      set('cms-footer-s4', c.service4_title);
-
-      // Social links
+      set('cms-footer-s1', c.service1_title); set('cms-footer-s2', c.service2_title);
+      set('cms-footer-s3', c.service3_title); set('cms-footer-s4', c.service4_title);
       setHref('cms-social-instagram', c.social_instagram);
       setHref('cms-social-linkedin', c.social_linkedin);
       setHref('cms-social-youtube', c.social_youtube);
