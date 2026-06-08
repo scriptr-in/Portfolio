@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>scriptr. — Strategy. Story. Impact.</title>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -1288,14 +1289,14 @@
 
 <!-- NAV -->
 <nav>
-  <a href="#" class="nav-logo">scriptr<span>.</span></a>
+  <a href="#" class="nav-logo" id="cms-brand-name">scriptr<span>.</span></a>
   <ul class="nav-links">
     <li><a href="#services">Services</a></li>
     <li><a href="#work">Work</a></li>
     <li><a href="#team">Team</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <a href="#contact" class="nav-cta">Start a Campaign</a>
+  <a href="#contact" class="nav-cta" id="cms-nav-cta">Start a Campaign</a>
   <div class="nav-hamburger" id="hamburger" onclick="toggleMobileNav()">
     <span></span><span></span><span></span>
   </div>
@@ -1304,22 +1305,22 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-grid-bg"></div>
-  <div class="hero-eyebrow"><span class="accent-line"></span>Content-Driven Campaigns That Move Culture</div>
-  <h1 class="hero-headline">We Don't Make <em>Ads.</em> We Make <em>Moments.</em></h1>
+  <div class="hero-eyebrow"><span class="accent-line"></span><span id="cms-hero-eyebrow">Content-Driven Campaigns That Move Culture</span></div>
+  <h1 class="hero-headline" id="cms-hero-headline">We Don't Make <em>Ads.</em> We Make <em>Moments.</em></h1>
   <div class="hero-sub-row">
-    <p class="hero-desc">Strategy, storytelling, and production — converged into viral campaigns that don't just get views, they shift behaviour.</p>
+    <p class="hero-desc" id="cms-hero-desc">Strategy, storytelling, and production — converged into viral campaigns that don't just get views, they shift behaviour.</p>
     <div class="hero-stats">
       <div class="stat-item">
-        <div class="stat-num">340<span>M+</span></div>
-        <div class="stat-label">Organic Reach</div>
+        <div class="stat-num"><span id="cms-stat1-num">340</span><span id="cms-stat1-unit">M+</span></div>
+        <div class="stat-label" id="cms-stat1-label">Organic Reach</div>
       </div>
       <div class="stat-item">
-        <div class="stat-num">98<span>%</span></div>
-        <div class="stat-label">Client Retention</div>
+        <div class="stat-num"><span id="cms-stat2-num">98</span><span id="cms-stat2-unit">%</span></div>
+        <div class="stat-label" id="cms-stat2-label">Client Retention</div>
       </div>
       <div class="stat-item">
-        <div class="stat-num">6<span>x</span></div>
-        <div class="stat-label">Avg. ROAS</div>
+        <div class="stat-num"><span id="cms-stat3-num">6</span><span id="cms-stat3-unit">x</span></div>
+        <div class="stat-label" id="cms-stat3-label">Avg. ROAS</div>
       </div>
     </div>
   </div>
@@ -1331,7 +1332,7 @@
 
 <!-- MARQUEE -->
 <div class="marquee-wrap">
-  <div class="marquee-track">
+  <div class="marquee-track" id="cms-marquee-track">
     <div class="marquee-item">Content Strategy</div>
     <div class="marquee-item">Brand Storytelling</div>
     <div class="marquee-item">Viral Campaign Design</div>
@@ -1353,45 +1354,45 @@
 
 <!-- CLIENTS -->
 <section class="clients">
-  <div class="clients-label">Trusted by forward-thinking brands</div>
+  <div class="clients-label" id="cms-clients-label">Trusted by forward-thinking brands</div>
   <div class="clients-row">
-    <div class="client-name">NaturaCo</div>
-    <div class="client-name">VaultTech</div>
-    <div class="client-name">DayMade</div>
-    <div class="client-name">Mireille Studio</div>
-    <div class="client-name">Apex Group</div>
-    <div class="client-name">Nuova Foods</div>
+    <div class="client-name" id="cms-client1">NaturaCo</div>
+    <div class="client-name" id="cms-client2">VaultTech</div>
+    <div class="client-name" id="cms-client3">DayMade</div>
+    <div class="client-name" id="cms-client4">Mireille Studio</div>
+    <div class="client-name" id="cms-client5">Apex Group</div>
+    <div class="client-name" id="cms-client6">Nuova Foods</div>
   </div>
 </section>
 
 <!-- SERVICES -->
 <section class="services" id="services">
   <div class="section-label reveal"><span class="accent-line"></span>What We Do</div>
-  <h2 class="section-title reveal">Four Disciplines.<br>One Seamless <em style="font-style:italic;color:var(--orange)">Pipeline.</em></h2>
+  <h2 class="section-title reveal" id="cms-services-headline">Four Disciplines.<br>One Seamless <em style="font-style:italic;color:var(--orange)">Pipeline.</em></h2>
   <div class="services-grid reveal">
     <div class="service-card">
       <div class="service-num">01</div>
       <span class="service-icon">◈</span>
-      <h3 class="service-title">Content Strategy</h3>
-      <p class="service-desc">Deep-dive audience research, platform mapping, and narrative architecture. We build the blueprint before a single frame is shot.</p>
+      <h3 class="service-title" id="cms-service1-title">Content Strategy</h3>
+      <p class="service-desc" id="cms-service1-desc">Deep-dive audience research, platform mapping, and narrative architecture. We build the blueprint before a single frame is shot.</p>
     </div>
     <div class="service-card">
       <div class="service-num">02</div>
       <span class="service-icon">◎</span>
-      <h3 class="service-title">Story Development</h3>
-      <p class="service-desc">Concepts that earn attention. From hero films to short-form hooks — we craft the story spine that makes audiences stop scrolling.</p>
+      <h3 class="service-title" id="cms-service2-title">Story Development</h3>
+      <p class="service-desc" id="cms-service2-desc">Concepts that earn attention. From hero films to short-form hooks — we craft the story spine that makes audiences stop scrolling.</p>
     </div>
     <div class="service-card">
       <div class="service-num">03</div>
       <span class="service-icon">⬡</span>
-      <h3 class="service-title">Plan & Shoot</h3>
-      <p class="service-desc">Full-stack production. Location scouting, casting, directing, and post — optimised for every platform from day one.</p>
+      <h3 class="service-title" id="cms-service3-title">Plan & Shoot</h3>
+      <p class="service-desc" id="cms-service3-desc">Full-stack production. Location scouting, casting, directing, and post — optimised for every platform from day one.</p>
     </div>
     <div class="service-card">
       <div class="service-num">04</div>
       <span class="service-icon">⟁</span>
-      <h3 class="service-title">Launch & Amplify</h3>
-      <p class="service-desc">Distribution strategy, paid amplification, creator seeding, and real-time optimisation to maximise organic velocity.</p>
+      <h3 class="service-title" id="cms-service4-title">Launch & Amplify</h3>
+      <p class="service-desc" id="cms-service4-desc">Distribution strategy, paid amplification, creator seeding, and real-time optimisation to maximise organic velocity.</p>
     </div>
   </div>
 </section>
@@ -1399,31 +1400,31 @@
 <!-- PROCESS -->
 <section class="process" id="process">
   <div class="section-label reveal"><span class="accent-line"></span>How We Work</div>
-  <h2 class="section-title reveal" style="color:var(--ink)">From Brief to<br>Breakthrough.</h2>
+  <h2 class="section-title reveal" id="cms-process-headline" style="color:var(--ink)">From Brief to Breakthrough.</h2>
   <div class="process-steps reveal">
     <div class="process-step">
       <div class="step-number">01</div>
-      <div class="step-tag">Discovery</div>
-      <h3 class="step-title">Audit, Analyse & Align</h3>
-      <p class="step-desc">We immerse in your brand, audience, and competitive landscape. Data-led insight shapes every creative decision that follows.</p>
+      <div class="step-tag" id="cms-step1-tag">Discovery</div>
+      <h3 class="step-title" id="cms-step1-title">Audit, Analyse & Align</h3>
+      <p class="step-desc" id="cms-step1-desc">We immerse in your brand, audience, and competitive landscape. Data-led insight shapes every creative decision that follows.</p>
     </div>
     <div class="process-step">
       <div class="step-number">02</div>
-      <div class="step-tag">Concepting</div>
-      <h3 class="step-title">Develop the Campaign Narrative</h3>
-      <p class="step-desc">We present three distinct creative territories. You choose the direction; we refine it to perfection with your team's input.</p>
+      <div class="step-tag" id="cms-step2-tag">Concepting</div>
+      <h3 class="step-title" id="cms-step2-title">Develop the Campaign Narrative</h3>
+      <p class="step-desc" id="cms-step2-desc">We present three distinct creative territories. You choose the direction; we refine it to perfection with your team's input.</p>
     </div>
     <div class="process-step">
       <div class="step-number">03</div>
-      <div class="step-tag">Production</div>
-      <h3 class="step-title">Plan, Shoot & Craft</h3>
-      <p class="step-desc">Meticulous pre-production. Cinematic shoots. Post-production precision. Every asset built for its platform, its moment, its audience.</p>
+      <div class="step-tag" id="cms-step3-tag">Production</div>
+      <h3 class="step-title" id="cms-step3-title">Plan, Shoot & Craft</h3>
+      <p class="step-desc" id="cms-step3-desc">Meticulous pre-production. Cinematic shoots. Post-production precision. Every asset built for its platform, its moment, its audience.</p>
     </div>
     <div class="process-step">
       <div class="step-number">04</div>
-      <div class="step-tag">Delivery</div>
-      <h3 class="step-title">Launch, Distribute & Report</h3>
-      <p class="step-desc">Strategic rollout, real-time analytics, and iteration. We don't just deliver — we track, learn, and amplify what's working.</p>
+      <div class="step-tag" id="cms-step4-tag">Delivery</div>
+      <h3 class="step-title" id="cms-step4-title">Launch, Distribute & Report</h3>
+      <p class="step-desc" id="cms-step4-desc">Strategic rollout, real-time analytics, and iteration. We don't just deliver — we track, learn, and amplify what's working.</p>
     </div>
   </div>
 </section>
@@ -1433,91 +1434,56 @@
   <div class="work-header">
     <div>
       <div class="section-label reveal"><span class="accent-line"></span>Selected Work</div>
-      <h2 class="section-title reveal" style="margin-bottom:0">Campaigns That<br><em style="font-style:italic;color:var(--orange)">Moved the Needle.</em></h2>
+      <h2 class="section-title reveal" id="cms-work-headline" style="margin-bottom:0">Campaigns That Moved the Needle.</h2>
     </div>
     <a href="#" class="view-all reveal">View All Work</a>
   </div>
-
   <div class="work-grid reveal">
     <div class="campaign-card">
-      <div class="card-bg bg-1">
-        <div class="card-abstract">
-          <svg width="400" height="500" viewBox="0 0 400 500" style="top:-20px;left:-20px;">
-            <circle cx="200" cy="250" r="180" fill="none" stroke="#CC5500" stroke-width="60"/>
-            <circle cx="200" cy="250" r="100" fill="none" stroke="#FF6B1A" stroke-width="30"/>
-            <line x1="0" y1="250" x2="400" y2="250" stroke="#CC5500" stroke-width="2"/>
-            <line x1="200" y1="0" x2="200" y2="500" stroke="#CC5500" stroke-width="2"/>
-          </svg>
-        </div>
-      </div>
+      <div class="card-bg bg-1"><div class="card-abstract"><svg width="400" height="500" viewBox="0 0 400 500" style="top:-20px;left:-20px;"><circle cx="200" cy="250" r="180" fill="none" stroke="#CC5500" stroke-width="60"/><circle cx="200" cy="250" r="100" fill="none" stroke="#FF6B1A" stroke-width="30"/><line x1="0" y1="250" x2="400" y2="250" stroke="#CC5500" stroke-width="2"/><line x1="200" y1="0" x2="200" y2="500" stroke="#CC5500" stroke-width="2"/></svg></div></div>
       <div class="card-overlay"></div>
       <div class="card-content">
-        <div class="card-tag">FMCG · Brand Film</div>
-        <h3 class="card-title">The Origin Series — NaturaCo</h3>
+        <div class="card-tag" id="cms-work1-tag">FMCG · Brand Film</div>
+        <h3 class="card-title" id="cms-work1-title">The Origin Series — NaturaCo</h3>
         <div class="card-meta">
-          <span>Documentary-style brand film</span>
-          <span class="card-metric">82M Views</span>
+          <span id="cms-work1-type">Documentary-style brand film</span>
+          <span class="card-metric" id="cms-work1-result">82M Views</span>
         </div>
       </div>
     </div>
-
     <div class="campaign-card">
-      <div class="card-bg bg-2">
-        <div class="card-abstract">
-          <svg width="350" height="280" viewBox="0 0 350 280" style="top:0;right:-30px;">
-            <polygon points="175,20 320,250 30,250" fill="none" stroke="#4A9EFF" stroke-width="40" opacity="0.5"/>
-            <polygon points="175,70 280,230 70,230" fill="none" stroke="#0066CC" stroke-width="20"/>
-          </svg>
-        </div>
-      </div>
+      <div class="card-bg bg-2"><div class="card-abstract"><svg width="350" height="280" viewBox="0 0 350 280" style="top:0;right:-30px;"><polygon points="175,20 320,250 30,250" fill="none" stroke="#4A9EFF" stroke-width="40" opacity="0.5"/><polygon points="175,70 280,230 70,230" fill="none" stroke="#0066CC" stroke-width="20"/></svg></div></div>
       <div class="card-overlay"></div>
       <div class="card-content">
-        <div class="card-tag">Tech · Social Campaign</div>
-        <h3 class="card-title">Future State — VaultTech</h3>
+        <div class="card-tag" id="cms-work2-tag">Tech · Social Campaign</div>
+        <h3 class="card-title" id="cms-work2-title">Future State — VaultTech</h3>
         <div class="card-meta">
-          <span>Multi-platform social series</span>
-          <span class="card-metric">12M Shares</span>
+          <span id="cms-work2-type">Multi-platform social series</span>
+          <span class="card-metric" id="cms-work2-result">12M Shares</span>
         </div>
       </div>
     </div>
-
     <div class="campaign-card">
-      <div class="card-bg bg-3">
-        <div class="card-abstract">
-          <svg width="350" height="280" viewBox="0 0 350 280" style="bottom:0;left:0;">
-            <rect x="30" y="30" width="290" height="220" fill="none" stroke="#FFFF00" stroke-width="30" opacity="0.3"/>
-            <rect x="80" y="80" width="190" height="120" fill="none" stroke="#CCCC00" stroke-width="20" opacity="0.5"/>
-            <rect x="120" y="110" width="110" height="60" fill="rgba(200,200,0,0.1)"/>
-          </svg>
-        </div>
-      </div>
+      <div class="card-bg bg-3"><div class="card-abstract"><svg width="350" height="280" viewBox="0 0 350 280" style="bottom:0;left:0;"><rect x="30" y="30" width="290" height="220" fill="none" stroke="#FFFF00" stroke-width="30" opacity="0.3"/><rect x="80" y="80" width="190" height="120" fill="none" stroke="#CCCC00" stroke-width="20" opacity="0.5"/><rect x="120" y="110" width="110" height="60" fill="rgba(200,200,0,0.1)"/></svg></div></div>
       <div class="card-overlay"></div>
       <div class="card-content">
-        <div class="card-tag">Lifestyle · UGC Campaign</div>
-        <h3 class="card-title">Real Hours — DayMade App</h3>
+        <div class="card-tag" id="cms-work3-tag">Lifestyle · UGC Campaign</div>
+        <h3 class="card-title" id="cms-work3-title">Real Hours — DayMade App</h3>
         <div class="card-meta">
-          <span>Creator-led UGC activation</span>
-          <span class="card-metric">340K UGC Posts</span>
+          <span id="cms-work3-type">Creator-led UGC activation</span>
+          <span class="card-metric" id="cms-work3-result">340K UGC Posts</span>
         </div>
       </div>
     </div>
-
     <div class="campaign-card">
-      <div class="card-bg bg-4">
-        <div class="card-abstract">
-          <svg width="350" height="280" viewBox="0 0 350 280" style="top:-20px;right:-20px;">
-            <ellipse cx="175" cy="140" rx="150" ry="110" fill="none" stroke="#FF4444" stroke-width="50" opacity="0.3"/>
-            <ellipse cx="175" cy="140" rx="80" ry="60" fill="rgba(200,0,0,0.15)"/>
-          </svg>
-        </div>
-      </div>
+      <div class="card-bg bg-4"><div class="card-abstract"><svg width="350" height="280" viewBox="0 0 350 280" style="top:-20px;right:-20px;"><ellipse cx="175" cy="140" rx="150" ry="110" fill="none" stroke="#FF4444" stroke-width="50" opacity="0.3"/><ellipse cx="175" cy="140" rx="80" ry="60" fill="rgba(200,0,0,0.15)"/></svg></div></div>
       <div class="card-overlay"></div>
       <div class="card-content">
-        <div class="card-tag">Fashion · Launch Campaign</div>
-        <h3 class="card-title">Second Skin — Mireille Studio</h3>
+        <div class="card-tag" id="cms-work4-tag">Fashion · Launch Campaign</div>
+        <h3 class="card-title" id="cms-work4-title">Second Skin — Mireille Studio</h3>
         <div class="card-meta">
-          <span>360° launch campaign</span>
-          <span class="card-metric">4.8x ROAS</span>
+          <span id="cms-work4-type">360° launch campaign</span>
+          <span class="card-metric" id="cms-work4-result">4.8x ROAS</span>
         </div>
       </div>
     </div>
@@ -1527,73 +1493,38 @@
 <!-- TEAM -->
 <section class="team" id="team">
   <div class="section-label reveal"><span class="accent-line"></span>The Team</div>
-  <h2 class="section-title reveal">The Minds<br>Behind the <em style="font-style:italic;color:var(--orange)">Magic.</em></h2>
+  <h2 class="section-title reveal" id="cms-team-headline">The Minds Behind the Magic.</h2>
   <div class="team-grid reveal">
     <div class="team-card">
-      <div class="team-avatar">
-        <div class="avatar-bg ab-1">
-          <svg width="160" height="160" viewBox="0 0 160 160">
-            <circle cx="80" cy="60" r="35" fill="rgba(204,85,0,0.3)"/>
-            <path d="M20 140 Q80 90 140 140" fill="rgba(204,85,0,0.2)"/>
-            <circle cx="80" cy="60" r="20" fill="rgba(204,85,0,0.5)"/>
-          </svg>
-        </div>
-      </div>
+      <div class="team-avatar"><div class="avatar-bg ab-1"><svg width="160" height="160" viewBox="0 0 160 160"><circle cx="80" cy="60" r="35" fill="rgba(204,85,0,0.3)"/><path d="M20 140 Q80 90 140 140" fill="rgba(204,85,0,0.2)"/><circle cx="80" cy="60" r="20" fill="rgba(204,85,0,0.5)"/></svg></div></div>
       <div class="team-info">
-        <div class="member-role">Strategy Director</div>
-        <div class="member-name">Zara Okonkwo</div>
-        <p class="member-desc">10 years shaping brand narratives for Fortune 500s. Obsessed with the gap between what brands say and what audiences remember.</p>
+        <div class="member-role" id="cms-team1-role">Strategy Director</div>
+        <div class="member-name" id="cms-team1-name">Zara Okonkwo</div>
+        <p class="member-desc" id="cms-team1-bio">10 years shaping brand narratives for Fortune 500s. Obsessed with the gap between what brands say and what audiences remember.</p>
       </div>
     </div>
-
     <div class="team-card">
-      <div class="team-avatar">
-        <div class="avatar-bg ab-2">
-          <svg width="160" height="160" viewBox="0 0 160 160">
-            <circle cx="80" cy="60" r="35" fill="rgba(70,130,200,0.3)"/>
-            <path d="M20 140 Q80 90 140 140" fill="rgba(70,130,200,0.2)"/>
-            <circle cx="80" cy="60" r="20" fill="rgba(70,130,200,0.5)"/>
-          </svg>
-        </div>
-      </div>
+      <div class="team-avatar"><div class="avatar-bg ab-2"><svg width="160" height="160" viewBox="0 0 160 160"><circle cx="80" cy="60" r="35" fill="rgba(70,130,200,0.3)"/><path d="M20 140 Q80 90 140 140" fill="rgba(70,130,200,0.2)"/><circle cx="80" cy="60" r="20" fill="rgba(70,130,200,0.5)"/></svg></div></div>
       <div class="team-info">
-        <div class="member-role">Creative Director</div>
-        <div class="member-name">Marcus Reyes</div>
-        <p class="member-desc">Concept architect. Turns briefs into cultural conversation starters. Former ad agency creative lead, now independent and unleashed.</p>
+        <div class="member-role" id="cms-team2-role">Creative Director</div>
+        <div class="member-name" id="cms-team2-name">Marcus Reyes</div>
+        <p class="member-desc" id="cms-team2-bio">Concept architect. Turns briefs into cultural conversation starters. Former ad agency creative lead, now independent and unleashed.</p>
       </div>
     </div>
-
     <div class="team-card">
-      <div class="team-avatar">
-        <div class="avatar-bg ab-3">
-          <svg width="160" height="160" viewBox="0 0 160 160">
-            <circle cx="80" cy="60" r="35" fill="rgba(180,180,0,0.3)"/>
-            <path d="M20 140 Q80 90 140 140" fill="rgba(180,180,0,0.2)"/>
-            <circle cx="80" cy="60" r="20" fill="rgba(180,180,0,0.5)"/>
-          </svg>
-        </div>
-      </div>
+      <div class="team-avatar"><div class="avatar-bg ab-3"><svg width="160" height="160" viewBox="0 0 160 160"><circle cx="80" cy="60" r="35" fill="rgba(180,180,0,0.3)"/><path d="M20 140 Q80 90 140 140" fill="rgba(180,180,0,0.2)"/><circle cx="80" cy="60" r="20" fill="rgba(180,180,0,0.5)"/></svg></div></div>
       <div class="team-info">
-        <div class="member-role">Director of Photography</div>
-        <div class="member-name">Suki Tanaka</div>
-        <p class="member-desc">Frames that feel. Shot campaigns across 22 countries. Equally at home with a RED cinema camera or a phone in vertical mode.</p>
+        <div class="member-role" id="cms-team3-role">Director of Photography</div>
+        <div class="member-name" id="cms-team3-name">Suki Tanaka</div>
+        <p class="member-desc" id="cms-team3-bio">Frames that feel. Shot campaigns across 22 countries. Equally at home with a RED cinema camera or a phone in vertical mode.</p>
       </div>
     </div>
-
     <div class="team-card">
-      <div class="team-avatar">
-        <div class="avatar-bg ab-4">
-          <svg width="160" height="160" viewBox="0 0 160 160">
-            <circle cx="80" cy="60" r="35" fill="rgba(200,50,80,0.3)"/>
-            <path d="M20 140 Q80 90 140 140" fill="rgba(200,50,80,0.2)"/>
-            <circle cx="80" cy="60" r="20" fill="rgba(200,50,80,0.5)"/>
-          </svg>
-        </div>
-      </div>
+      <div class="team-avatar"><div class="avatar-bg ab-4"><svg width="160" height="160" viewBox="0 0 160 160"><circle cx="80" cy="60" r="35" fill="rgba(200,50,80,0.3)"/><path d="M20 140 Q80 90 140 140" fill="rgba(200,50,80,0.2)"/><circle cx="80" cy="60" r="20" fill="rgba(200,50,80,0.5)"/></svg></div></div>
       <div class="team-info">
-        <div class="member-role">Distribution & Growth</div>
-        <div class="member-name">Levi Adeyemi</div>
-        <p class="member-desc">Data meets instinct. Builds distribution engines that turn great content into exponential reach. Loves a spreadsheet as much as a headline.</p>
+        <div class="member-role" id="cms-team4-role">Distribution & Growth</div>
+        <div class="member-name" id="cms-team4-name">Levi Adeyemi</div>
+        <p class="member-desc" id="cms-team4-bio">Data meets instinct. Builds distribution engines that turn great content into exponential reach. Loves a spreadsheet as much as a headline.</p>
       </div>
     </div>
   </div>
@@ -1601,12 +1532,12 @@
 
 <!-- MANIFESTO -->
 <section class="manifesto">
-  <p class="manifesto-text reveal">
+  <p class="manifesto-text reveal" id="cms-manifesto-text">
     Attention is the only currency that matters. We earn it with <em>strategy,</em> hold it with <em>story,</em> and convert it to <em>impact.</em>
   </p>
   <div class="manifesto-attribution reveal">
     <div class="attr-line"></div>
-    <span class="attr-text">The scriptr. Manifesto</span>
+    <span class="attr-text" id="cms-manifesto-attr">The scriptr. Manifesto</span>
   </div>
 </section>
 
@@ -1614,27 +1545,27 @@
 <section class="contact" id="contact">
   <div class="contact-left">
     <div class="section-label reveal"><span class="accent-line"></span>Let's Make Something</div>
-    <h2 class="section-title reveal">Got a Brief?<br><em>Let's Talk.</em></h2>
+    <h2 class="section-title reveal" id="cms-contact-headline">Got a Brief?<br><em>Let's Talk.</em></h2>
     <div class="contact-details reveal">
       <div class="contact-item">
         <div class="contact-icon">✉</div>
         <div class="contact-text">
           <strong>Email</strong>
-          hello@scriptr.studio
+          <span id="cms-contact-email">hello@scriptr.in</span>
         </div>
       </div>
       <div class="contact-item">
         <div class="contact-icon">◎</div>
         <div class="contact-text">
           <strong>Instagram</strong>
-          @scriptr.studio
+          <span id="cms-contact-instagram">@scriptr.in</span>
         </div>
       </div>
       <div class="contact-item">
         <div class="contact-icon">⬡</div>
         <div class="contact-text">
           <strong>Based in</strong>
-          Mumbai · Delhi · Bengaluru
+          <span id="cms-city1">Mumbai</span> · <span id="cms-city2">Delhi</span> · <span id="cms-city3">Bengaluru</span>
         </div>
       </div>
     </div>
@@ -1651,29 +1582,25 @@
 <!-- FOOTER -->
 <footer>
   <div class="footer-top">
-
-    <!-- Brand col -->
     <div class="footer-col">
-      <a href="#" class="footer-logo">scriptr<span>.</span></a>
-      <div class="footer-tagline" style="margin-top:8px;margin-bottom:20px">Strategy. Story. Impact.</div>
-      <p class="footer-about-text">India's content-first campaign studio. We build narratives that earn attention and convert it into growth.</p>
+      <a href="#" class="footer-logo" id="cms-footer-brand">scriptr<span>.</span></a>
+      <div class="footer-tagline" id="cms-footer-tagline" style="margin-top:8px;margin-bottom:20px">Strategy. Story. Impact.</div>
+      <p class="footer-about-text" id="cms-footer-about">India's content-first campaign studio. We build narratives that earn attention and convert it into growth.</p>
       <div class="footer-social">
-        <a href="#" class="footer-social-link" title="Instagram">
+        <a href="#" id="cms-social-instagram" class="footer-social-link" title="Instagram">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
         </a>
-        <a href="#" class="footer-social-link" title="LinkedIn">
+        <a href="#" id="cms-social-linkedin" class="footer-social-link" title="LinkedIn">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
         </a>
-        <a href="#" class="footer-social-link" title="YouTube">
+        <a href="#" id="cms-social-youtube" class="footer-social-link" title="YouTube">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.96-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
         </a>
-        <a href="#" class="footer-social-link" title="Twitter / X">
+        <a href="#" id="cms-social-x" class="footer-social-link" title="Twitter / X">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
         </a>
       </div>
     </div>
-
-    <!-- Quick Links col -->
     <div class="footer-col">
       <div class="footer-col-title">Quick Links</div>
       <ul class="footer-nav-list">
@@ -1684,52 +1611,46 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
-
-    <!-- Services col -->
     <div class="footer-col">
       <div class="footer-col-title">What We Do</div>
       <ul class="footer-nav-list">
-        <li><a href="#services">Content Strategy</a></li>
-        <li><a href="#services">Story Development</a></li>
-        <li><a href="#services">Plan & Shoot</a></li>
-        <li><a href="#services">Launch & Amplify</a></li>
+        <li><a href="#services" id="cms-footer-s1">Content Strategy</a></li>
+        <li><a href="#services" id="cms-footer-s2">Story Development</a></li>
+        <li><a href="#services" id="cms-footer-s3">Plan & Shoot</a></li>
+        <li><a href="#services" id="cms-footer-s4">Launch & Amplify</a></li>
         <li><a href="#services">Influencer Direction</a></li>
       </ul>
     </div>
-
-    <!-- Contact col -->
     <div class="footer-col">
       <div class="footer-col-title">Get in Touch</div>
       <div class="footer-contact-list">
         <div class="footer-contact-item">
           <strong>Email</strong>
-          <a href="mailto:hello@scriptr.studio">hello@scriptr.studio</a>
+          <a href="#" id="cms-footer-email">hello@scriptr.in</a>
         </div>
         <div class="footer-contact-item">
           <strong>Instagram</strong>
-          <a href="#">@scriptr.studio</a>
+          <a href="#" id="cms-footer-instagram">@scriptr.in</a>
         </div>
         <div class="footer-contact-item">
           <strong>Based in</strong>
-          Mumbai · Delhi · Bengaluru
+          <span id="cms-footer-cities">Mumbai · Delhi · Bengaluru</span>
         </div>
         <div class="footer-contact-item">
           <strong>GST No.</strong>
-          27XXXXX0000X1ZX
+          <span id="cms-footer-gst">27XXXXX0000X1ZX</span>
         </div>
       </div>
     </div>
-
   </div>
-
   <div class="footer-bottom">
-    <div class="footer-copy">© 2026 scriptr. studio. All rights reserved.</div>
+    <div class="footer-copy">© <span id="cms-copyright-year">2026</span> <span id="cms-footer-brand2">scriptr. studio</span>. All rights reserved.</div>
     <div class="footer-links">
       <a href="#" class="footer-link" onclick="openModal('terms'); return false;">Terms of Service</a>
       <span class="footer-divider">·</span>
       <a href="#" class="footer-link" onclick="openModal('privacy'); return false;">Privacy Policy</a>
     </div>
-    <div class="footer-copy">Made with intent. Built in India.</div>
+    <div class="footer-copy" id="cms-footer-signoff">Made with intent. Built in India.</div>
   </div>
 </footer>
 
@@ -1932,6 +1853,161 @@
       ['terms', 'privacy'].forEach(t => closeModal(t));
     }
   });
+</script>
+<!-- CMS CONTENT LOADER -->
+<script>
+  // Load all content from content.json and populate the page
+  fetch('/content.json')
+    .then(r => r.json())
+    .then(c => {
+      const set = (id, val) => { const el = document.getElementById(id); if (el && val) el.textContent = val; };
+      const setHref = (id, val) => { const el = document.getElementById(id); if (el && val) el.href = val; };
+
+      // Page title
+      if (c.page_title) document.title = c.page_title;
+
+      // Brand & Nav
+      set('cms-brand-name', c.brand_name);
+      set('cms-nav-cta', c.nav_cta);
+
+      // Hero
+      set('cms-hero-eyebrow', c.hero_eyebrow);
+      set('cms-hero-headline', c.hero_headline);
+      set('cms-hero-desc', c.hero_desc);
+      set('cms-stat1-num', c.stat1_num);
+      set('cms-stat1-unit', c.stat1_unit);
+      set('cms-stat1-label', c.stat1_label);
+      set('cms-stat2-num', c.stat2_num);
+      set('cms-stat2-unit', c.stat2_unit);
+      set('cms-stat2-label', c.stat2_label);
+      set('cms-stat3-num', c.stat3_num);
+      set('cms-stat3-unit', c.stat3_unit);
+      set('cms-stat3-label', c.stat3_label);
+
+      // Marquee — rebuild both sets
+      const marqueeKeys = ['marquee1','marquee2','marquee3','marquee4','marquee5','marquee6','marquee7','marquee8'];
+      const track = document.getElementById('cms-marquee-track');
+      if (track) {
+        const items = marqueeKeys.map(k => c[k] || '').filter(Boolean);
+        const doubled = [...items, ...items];
+        track.innerHTML = doubled.map(t => `<div class="marquee-item">${t}</div>`).join('');
+      }
+
+      // Clients
+      set('cms-clients-label', c.clients_label);
+      set('cms-client1', c.client1);
+      set('cms-client2', c.client2);
+      set('cms-client3', c.client3);
+      set('cms-client4', c.client4);
+      set('cms-client5', c.client5);
+      set('cms-client6', c.client6);
+
+      // Services
+      set('cms-services-headline', c.services_headline);
+      set('cms-service1-title', c.service1_title);
+      set('cms-service1-desc', c.service1_desc);
+      set('cms-service2-title', c.service2_title);
+      set('cms-service2-desc', c.service2_desc);
+      set('cms-service3-title', c.service3_title);
+      set('cms-service3-desc', c.service3_desc);
+      set('cms-service4-title', c.service4_title);
+      set('cms-service4-desc', c.service4_desc);
+
+      // Process
+      set('cms-process-headline', c.process_headline);
+      set('cms-step1-tag', c.step1_tag);
+      set('cms-step1-title', c.step1_title);
+      set('cms-step1-desc', c.step1_desc);
+      set('cms-step2-tag', c.step2_tag);
+      set('cms-step2-title', c.step2_title);
+      set('cms-step2-desc', c.step2_desc);
+      set('cms-step3-tag', c.step3_tag);
+      set('cms-step3-title', c.step3_title);
+      set('cms-step3-desc', c.step3_desc);
+      set('cms-step4-tag', c.step4_tag);
+      set('cms-step4-title', c.step4_title);
+      set('cms-step4-desc', c.step4_desc);
+
+      // Work
+      set('cms-work-headline', c.work_headline);
+      set('cms-work1-tag', c.work1_tag);
+      set('cms-work1-title', c.work1_title);
+      set('cms-work1-type', c.work1_type);
+      set('cms-work1-result', c.work1_result);
+      set('cms-work2-tag', c.work2_tag);
+      set('cms-work2-title', c.work2_title);
+      set('cms-work2-type', c.work2_type);
+      set('cms-work2-result', c.work2_result);
+      set('cms-work3-tag', c.work3_tag);
+      set('cms-work3-title', c.work3_title);
+      set('cms-work3-type', c.work3_type);
+      set('cms-work3-result', c.work3_result);
+      set('cms-work4-tag', c.work4_tag);
+      set('cms-work4-title', c.work4_title);
+      set('cms-work4-type', c.work4_type);
+      set('cms-work4-result', c.work4_result);
+
+      // Team
+      set('cms-team-headline', c.team_headline);
+      set('cms-team1-name', c.team1_name);
+      set('cms-team1-role', c.team1_role);
+      set('cms-team1-bio', c.team1_bio);
+      set('cms-team2-name', c.team2_name);
+      set('cms-team2-role', c.team2_role);
+      set('cms-team2-bio', c.team2_bio);
+      set('cms-team3-name', c.team3_name);
+      set('cms-team3-role', c.team3_role);
+      set('cms-team3-bio', c.team3_bio);
+      set('cms-team4-name', c.team4_name);
+      set('cms-team4-role', c.team4_role);
+      set('cms-team4-bio', c.team4_bio);
+
+      // Manifesto
+      set('cms-manifesto-text', c.manifesto_text);
+      set('cms-manifesto-attr', c.manifesto_attr);
+
+      // Contact
+      set('cms-contact-headline', c.contact_headline);
+      set('cms-contact-email', c.contact_email);
+      set('cms-contact-instagram', c.contact_instagram);
+      set('cms-city1', c.city1);
+      set('cms-city2', c.city2);
+      set('cms-city3', c.city3);
+
+      // Footer
+      set('cms-footer-brand', c.brand_name);
+      set('cms-footer-brand2', c.brand_name);
+      set('cms-footer-tagline', c.footer_tagline);
+      set('cms-footer-about', c.footer_about);
+      set('cms-footer-email', c.contact_email);
+      set('cms-footer-instagram', c.contact_instagram);
+      set('cms-footer-cities', `${c.city1} · ${c.city2} · ${c.city3}`);
+      set('cms-footer-gst', c.gst_number);
+      set('cms-copyright-year', c.copyright_year);
+      set('cms-footer-signoff', c.footer_signoff);
+      set('cms-footer-s1', c.service1_title);
+      set('cms-footer-s2', c.service2_title);
+      set('cms-footer-s3', c.service3_title);
+      set('cms-footer-s4', c.service4_title);
+
+      // Social links
+      setHref('cms-social-instagram', c.social_instagram);
+      setHref('cms-social-linkedin', c.social_linkedin);
+      setHref('cms-social-youtube', c.social_youtube);
+      setHref('cms-social-x', c.social_x);
+    })
+    .catch(e => console.warn('content.json not loaded:', e));
+
+  // Netlify Identity redirect
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on('init', user => {
+      if (!user) {
+        window.netlifyIdentity.on('login', () => {
+          document.location.href = '/admin/';
+        });
+      }
+    });
+  }
 </script>
 </body>
 </html>
