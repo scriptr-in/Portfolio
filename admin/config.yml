@@ -1,0 +1,165 @@
+backend:
+  name: github
+  repo: scriptr-in/Portfolio
+  branch: main
+
+media_folder: "images"
+
+collections:
+  - name: "settings"
+    label: "Site Content"
+    files:
+
+      - name: "brand"
+        label: "🏷️ Brand & Nav"
+        file: "content.json"
+        fields:
+          - { label: "Brand Name (logo text)", name: "brand_name", widget: "string" }
+          - { label: "Nav CTA Button Text", name: "nav_cta", widget: "string" }
+          - { label: "Page Title (browser tab)", name: "page_title", widget: "string" }
+
+      - name: "hero"
+        label: "🎯 Hero Section"
+        file: "content.json"
+        fields:
+          - { label: "Eyebrow text", name: "hero_eyebrow", widget: "string" }
+          - { label: "Headline", name: "hero_headline", widget: "string" }
+          - { label: "Description", name: "hero_desc", widget: "text" }
+          - { label: "Stat 1 — Number", name: "stat1_num", widget: "string" }
+          - { label: "Stat 1 — Unit", name: "stat1_unit", widget: "string" }
+          - { label: "Stat 1 — Label", name: "stat1_label", widget: "string" }
+          - { label: "Stat 2 — Number", name: "stat2_num", widget: "string" }
+          - { label: "Stat 2 — Unit", name: "stat2_unit", widget: "string" }
+          - { label: "Stat 2 — Label", name: "stat2_label", widget: "string" }
+          - { label: "Stat 3 — Number", name: "stat3_num", widget: "string" }
+          - { label: "Stat 3 — Unit", name: "stat3_unit", widget: "string" }
+          - { label: "Stat 3 — Label", name: "stat3_label", widget: "string" }
+
+      - name: "marquee"
+        label: "📢 Marquee Banner"
+        file: "content.json"
+        fields:
+          - { label: "Keyword 1", name: "marquee1", widget: "string" }
+          - { label: "Keyword 2", name: "marquee2", widget: "string" }
+          - { label: "Keyword 3", name: "marquee3", widget: "string" }
+          - { label: "Keyword 4", name: "marquee4", widget: "string" }
+          - { label: "Keyword 5", name: "marquee5", widget: "string" }
+          - { label: "Keyword 6", name: "marquee6", widget: "string" }
+          - { label: "Keyword 7", name: "marquee7", widget: "string" }
+          - { label: "Keyword 8", name: "marquee8", widget: "string" }
+
+      - name: "clients"
+        label: "🤝 Clients Strip"
+        file: "content.json"
+        fields:
+          - { label: "Section Label", name: "clients_label", widget: "string" }
+          - { label: "Client 1", name: "client1", widget: "string" }
+          - { label: "Client 2", name: "client2", widget: "string" }
+          - { label: "Client 3", name: "client3", widget: "string" }
+          - { label: "Client 4", name: "client4", widget: "string" }
+          - { label: "Client 5", name: "client5", widget: "string" }
+          - { label: "Client 6", name: "client6", widget: "string" }
+
+      - name: "services"
+        label: "⚙️ Services Section"
+        file: "content.json"
+        fields:
+          - { label: "Section Headline", name: "services_headline", widget: "string" }
+          - { label: "Service 1 — Title", name: "service1_title", widget: "string" }
+          - { label: "Service 1 — Description", name: "service1_desc", widget: "text" }
+          - { label: "Service 2 — Title", name: "service2_title", widget: "string" }
+          - { label: "Service 2 — Description", name: "service2_desc", widget: "text" }
+          - { label: "Service 3 — Title", name: "service3_title", widget: "string" }
+          - { label: "Service 3 — Description", name: "service3_desc", widget: "text" }
+          - { label: "Service 4 — Title", name: "service4_title", widget: "string" }
+          - { label: "Service 4 — Description", name: "service4_desc", widget: "text" }
+
+      - name: "process"
+        label: "🔄 Process Section"
+        file: "content.json"
+        fields:
+          - { label: "Section Headline", name: "process_headline", widget: "string" }
+          - { label: "Step 1 — Tag", name: "step1_tag", widget: "string" }
+          - { label: "Step 1 — Title", name: "step1_title", widget: "string" }
+          - { label: "Step 1 — Description", name: "step1_desc", widget: "text" }
+          - { label: "Step 2 — Tag", name: "step2_tag", widget: "string" }
+          - { label: "Step 2 — Title", name: "step2_title", widget: "string" }
+          - { label: "Step 2 — Description", name: "step2_desc", widget: "text" }
+          - { label: "Step 3 — Tag", name: "step3_tag", widget: "string" }
+          - { label: "Step 3 — Title", name: "step3_title", widget: "string" }
+          - { label: "Step 3 — Description", name: "step3_desc", widget: "text" }
+          - { label: "Step 4 — Tag", name: "step4_tag", widget: "string" }
+          - { label: "Step 4 — Title", name: "step4_title", widget: "string" }
+          - { label: "Step 4 — Description", name: "step4_desc", widget: "text" }
+
+      - name: "work"
+        label: "💼 Work / Portfolio"
+        file: "content.json"
+        fields:
+          - { label: "Section Headline", name: "work_headline", widget: "string" }
+          - { label: "Project 1 — Industry & Format", name: "work1_tag", widget: "string" }
+          - { label: "Project 1 — Title", name: "work1_title", widget: "string" }
+          - { label: "Project 1 — Type", name: "work1_type", widget: "string" }
+          - { label: "Project 1 — Key Result", name: "work1_result", widget: "string" }
+          - { label: "Project 2 — Industry & Format", name: "work2_tag", widget: "string" }
+          - { label: "Project 2 — Title", name: "work2_title", widget: "string" }
+          - { label: "Project 2 — Type", name: "work2_type", widget: "string" }
+          - { label: "Project 2 — Key Result", name: "work2_result", widget: "string" }
+          - { label: "Project 3 — Industry & Format", name: "work3_tag", widget: "string" }
+          - { label: "Project 3 — Title", name: "work3_title", widget: "string" }
+          - { label: "Project 3 — Type", name: "work3_type", widget: "string" }
+          - { label: "Project 3 — Key Result", name: "work3_result", widget: "string" }
+          - { label: "Project 4 — Industry & Format", name: "work4_tag", widget: "string" }
+          - { label: "Project 4 — Title", name: "work4_title", widget: "string" }
+          - { label: "Project 4 — Type", name: "work4_type", widget: "string" }
+          - { label: "Project 4 — Key Result", name: "work4_result", widget: "string" }
+
+      - name: "team"
+        label: "👥 Team Section"
+        file: "content.json"
+        fields:
+          - { label: "Section Headline", name: "team_headline", widget: "string" }
+          - { label: "Member 1 — Name", name: "team1_name", widget: "string" }
+          - { label: "Member 1 — Role", name: "team1_role", widget: "string" }
+          - { label: "Member 1 — Bio", name: "team1_bio", widget: "text" }
+          - { label: "Member 2 — Name", name: "team2_name", widget: "string" }
+          - { label: "Member 2 — Role", name: "team2_role", widget: "string" }
+          - { label: "Member 2 — Bio", name: "team2_bio", widget: "text" }
+          - { label: "Member 3 — Name", name: "team3_name", widget: "string" }
+          - { label: "Member 3 — Role", name: "team3_role", widget: "string" }
+          - { label: "Member 3 — Bio", name: "team3_bio", widget: "text" }
+          - { label: "Member 4 — Name", name: "team4_name", widget: "string" }
+          - { label: "Member 4 — Role", name: "team4_role", widget: "string" }
+          - { label: "Member 4 — Bio", name: "team4_bio", widget: "text" }
+
+      - name: "manifesto"
+        label: "✍️ Manifesto"
+        file: "content.json"
+        fields:
+          - { label: "Manifesto Statement", name: "manifesto_text", widget: "text" }
+          - { label: "Attribution Label", name: "manifesto_attr", widget: "string" }
+
+      - name: "contact"
+        label: "📬 Contact Section"
+        file: "content.json"
+        fields:
+          - { label: "Section Headline", name: "contact_headline", widget: "string" }
+          - { label: "Email Address", name: "contact_email", widget: "string" }
+          - { label: "Instagram Handle", name: "contact_instagram", widget: "string" }
+          - { label: "City 1", name: "city1", widget: "string" }
+          - { label: "City 2", name: "city2", widget: "string" }
+          - { label: "City 3", name: "city3", widget: "string" }
+
+      - name: "footer"
+        label: "🔻 Footer"
+        file: "content.json"
+        fields:
+          - { label: "Footer Tagline", name: "footer_tagline", widget: "string" }
+          - { label: "Footer About Text", name: "footer_about", widget: "text" }
+          - { label: "Instagram URL", name: "social_instagram", widget: "string" }
+          - { label: "LinkedIn URL", name: "social_linkedin", widget: "string" }
+          - { label: "YouTube URL", name: "social_youtube", widget: "string" }
+          - { label: "X / Twitter URL", name: "social_x", widget: "string" }
+          - { label: "GST Number", name: "gst_number", widget: "string" }
+          - { label: "Copyright Year", name: "copyright_year", widget: "string" }
+          - { label: "Footer Sign-off", name: "footer_signoff", widget: "string" }
