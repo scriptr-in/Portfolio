@@ -1627,7 +1627,7 @@
     </div>
   </div>
   <div class="contact-right reveal">
-    <form name="brief" method="POST" data-netlify="true" action="/thank-you.html">
+    <form name="brief" method="POST" data-netlify="true" action="thank-you.html">
       <input type="hidden" name="form-name" value="brief">
       <input class="input-field" type="text" name="name" placeholder="Your Name" required>
       <input class="input-field" type="text" name="company" placeholder="Brand / Company" required>
@@ -1915,7 +1915,7 @@
 </script>
 <!-- CMS CONTENT LOADER -->
 <script>
-  fetch('/content.json')
+  fetch('content.json')
     .then(r => r.json())
     .then(c => {
       const set = (id, val) => { const el = document.getElementById(id); if (el && val) el.textContent = val; };
